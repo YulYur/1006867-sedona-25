@@ -50,11 +50,13 @@
       	    <h2>Еда</h2>
       	    <p>Всегда заказывайте фирменный бургер,<br>
       	    вы не разочаруетесь!</p>
+      	</div>
       	<div class="feature-item">
       	    <h2>Сувениры</h2>
       	    <p>Не только китайского, но и местного<br>
       	    производства!</p>
       	</div>
+      </section>
       <section class="reason-bridge">
       	<div class="image-bridge">
       		<img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
@@ -90,11 +92,37 @@
             и толпится там</p>
         </div>
       </section>
-      <section class="hostels">
+      <section class="hotels">
       	<h2>Заинтересовались?</h2>
-      	<p class="hostels-info">Укажите предполагаемые даты поездки,<br>
+      	<p class="hotels-info">Укажите предполагаемые даты поездки,<br>
       	и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      	<!-- Здесь будет форма --> 
+        <a class="hotels-link" href="hotels.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
+      	<form class="hotels-form" action="https://echo.htmlacademy.ru" method="post">
+      		<fieldset>
+                <p class="hotel-item">
+                	<label for="hotel-arrival-date">Дата заезда</label>
+                	<input id="hotel-arrival-date" type="text" name="arrival-date" value="" placeholder=" 24 апреля 2017">
+                </p>
+                <p class="hotel-item">
+                	<label for="hotel-departure-date">Дата выезда</label>
+                	<input id="hotel-departure-date" type="text" name="departure-date" value="" placeholder=" 4 июля 2017">
+                </p>
+                <p class="hotel-item">
+                	<label>Взрослые:
+           		        <button type="submit" name="down">-</button>
+          		        <input type="text" name="adults" value="2">
+          		        <button type="submit" name="up">+</button>
+          	        </label>
+          	        <label>Дети:
+          	        	<button type="submit" name="down">-</button>
+          		        <input type="text" name="adults" value="0">
+          		        <button type="submit" name="up">+</button>
+          	        </label> 	
+                </p>
+                    <button class="button" type="submit">Найти</button>
+                    <!--<input type="submit" value="Найти">--> 
+            </fieldset>
+        </form> 
       </section>
       <section class="map">
       	<img src="img/map.jpg" width="1200" height="594" alt="Карта">
