@@ -65,7 +65,7 @@ site-navigation a:active {
   min-height: 528px;
   background-color: #e1e3b0;
   background-image: url("../img/polygon.png"), url("../img/background-photo.jpg");
-  background-position: bottom center, top center;
+  background-position: 0 470px, center top;
   background-repeat: no-repeat, no-repeat;
 }
 
