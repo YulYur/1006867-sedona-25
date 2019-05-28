@@ -15,6 +15,29 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 button {
   font: inherit;
   text-align: center;
@@ -26,25 +49,36 @@ button {
 .main-navigation {
   color: #000000;
   background-color: #ffffff;
-  display: flex;
 }
 
 .site-navigation {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-header-logo {
-  width: 239px;
-  height: 56px;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
 }
 
 .site-navigation li {
   width: 239px;
   height: 56px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .site-navigation a {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: #000000;
 }
 
@@ -69,23 +103,25 @@ site-navigation a:active {
   background-repeat: no-repeat, no-repeat;
 }
 
-.visually-hidden {
+.welcome img {
   position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  top: 132px;
+  left: 50%;
+  margin-left: -230px;
 }
 
 .info {
   text-align: center;
   width: 1200px;
   height: 216px;
-  padding-top: 48px; 
+  margin: 0;
+  padding-top: 49px;
+  padding-bottom: 56px;
+  box-sizing: border-box;
 }
 
 .info h2 {
-  font-size: 21px; 
+ font-size: 21px; 
 }
 
 .info p {
@@ -93,18 +129,18 @@ site-navigation a:active {
 }
 
 .real-town h2,
-.features-one h2,
+.advices h2,
 .reason-bridge h2,
-.features-two h2 {
+.features h2 {
   font-size: 21px;
   line-height: 21px;
   text-align: center;
 }
 
 .real-town p,
-.features-one p,
+.advices p,
 .reason-bridge p,
-.features-two p {
+.features p {
   line-height: 21px;
   font-weight: 400;
   text-align: center;
@@ -118,21 +154,27 @@ site-navigation a:active {
 }
 
 .town-life {
-  width: 280px;
-  height: 146px;
+  width: 400px;
+  height: 256px;
   color: #ffffff;
   background-color: #81b3d2;
-  padding: 46px 60px 64px;
+  padding-top: 45px;
   margin: 0;
+  box-sizing: border-box;
 }
 
-.features-one {
+.advices {
   display: flex;
   width: 1200px;
-  height: 330px;
-  justify-content: between;
   margin: 0;
   padding: 0; 
+}
+
+.advice-item {
+  width: 400px;
+  height: 330px;
+  padding-top: 158px;
+  box-sizing: border-box;
 }
 
 .reason-bridge {
@@ -143,25 +185,29 @@ site-navigation a:active {
 }
 
 .bridge {
-  width: 303px;
-  height: 142px;
+  width: 400px;
+  height: 256px;
   color: #ffffff;
   background-color: #81b3d2;
-  padding: 49px 49px 65px 48px;
+  padding: 0;
   margin: 0;
+  padding-top: 45px;
+  box-sizing: border-box;
 }
 
-.features-two {
+.features {
   display: flex;
   width: 1200px;
-  height: 256px;
-  background-color: #eeeeee;
   margin: 0;
   padding: 0;
 }
 
 .feature-item {
-  width: 400px; 
+  width: 400px;
+  height: 256px;
+  background-color: #eeeeee;
+  padding-top: 45px;
+  box-sizing: border-box;
 }
 
 .hotels-link {
