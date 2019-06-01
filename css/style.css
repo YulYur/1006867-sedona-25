@@ -1,4 +1,5 @@
 body {
+  position: relative;
   margin: 0;
   padding: 0;
 
@@ -68,6 +69,7 @@ button {
   position: absolute;
   left: 50%;
   margin-left: -70px;
+  z-index: 1;
 }
 
 .site-navigation li {
@@ -131,7 +133,6 @@ site-navigation a:active {
 .info {
   text-align: center;
   width: 1200px;
-  margin: 0;
   padding-top: 35px;
   padding-bottom: 60px;
 }
@@ -175,15 +176,12 @@ site-navigation a:active {
   display: flex;
   width: 1200px;
   background-color: #81b3d2;
-  padding: 0; 
-  margin: 0;
+ 
 }
 
 .town-life {
   width: 400px;
   color: #ffffff;
-  padding: 0; 
-  margin: 0;
   padding-top: 44px;
   padding-bottom: 44px;
 }
@@ -195,14 +193,10 @@ site-navigation a:active {
 .advices {
   display: flex;
   width: 1200px;
-  padding: 0; 
-  margin: 0; 
 }
 
 .advice-item {
   width: 400px;
-  padding: 0; 
-  margin: 0;
   padding-bottom: 66px;
 }
 
@@ -211,35 +205,31 @@ site-navigation a:active {
   padding-top: 158px; 
 }
 
-.advice-item:first-child h2::before {
+.advice-item h2::before {
   content: "";
   position: absolute;
+  right: 0;
+  left: 0; 
+  margin: auto;
+}
+.advice-item:first-child h2::before {
   width: 75px;
   height: 72px;
   top: 60px;
-  left: 162px; 
   background: url("../img/icon-1.svg") no-repeat 0 0;
 }
 
 .advice-item:nth-child(2) h2::before {
-  content: "";
-  position: absolute;
   width: 74px;
   height: 70px;
   top: 60px;
-  left: 50%; 
-  margin-left: -37px;
   background: url("../img/icon-2.svg") no-repeat 0 0;
 }
 
 .advice-item:last-child h2::before {
-  content: "";
-  position: absolute;
   width: 64px;
   height: 76px;
-  top: 56px;
-  left: 50%; 
-  margin-left: -32px; 
+  top: 56px; 
   background: url("../img/icon-3.svg") no-repeat 0 0;
 }
 
@@ -247,15 +237,11 @@ site-navigation a:active {
   width: 1200px;
   display: flex;
   background-color: #81b3d2;
-  padding: 0; 
-  margin: 0;
 }
 
 .bridge {
   width: 400px;
   color: #ffffff;
-  padding: 0;
-  margin: 0;
   padding-top: 44px;
   padding-bottom: 44px;
 }
@@ -267,15 +253,11 @@ site-navigation a:active {
 .features {
   display: flex;
   width: 1200px;
-  padding: 0; 
-  margin: 0;
 }
 
 .feature-item {
   width: 400px;
   background-color: #eeeeee;
-  padding: 0; 
-  margin: 0;
   padding-top: 44px;
   padding-bottom: 44px;
 }
@@ -297,11 +279,9 @@ site-navigation a:active {
 }
 
 .hotels {
+  position: relative;
   text-align: center;
-  padding: 0;
-  margin:  0;
   padding-top: 44px;
-  padding-bottom: 55px;
 }
 
 .hotels h2 {
@@ -315,14 +295,20 @@ site-navigation a:active {
 .hotels p {
   line-height: 24px;
   font-weight: 400;
+  margin-bottom: 53px;
 }
 
-.hotels-link a {
+.hotels-link {
   display: block;
+  width: 568px;
   text-align: center;
   font-size: 21px;
   color: #ffffff;
   background-color: #766357;
+  padding-top: 26px; 
+  padding-bottom: 33px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .hotels-link  a:hover {
@@ -334,12 +320,59 @@ site-navigation a:active {
   background-color: #503e33;
 }
 
-.hotel input {
+
+.hotels-form {
+  position: absolute;
+  width: 568px;
+  height: 395px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font: inherit;
+  background-color: #ffffff;
+  padding: 55px;
+  box-sizing: border-box;
+}
+
+.hotels p {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.hotel-date {
+  position: relative;
+  width: 458px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px; 
+}
+
+.hotel-date input {
+  width: 346px;
+  padding-top: 9px;
+  padding-bottom: 8px; 
+  padding-left: 12px;
+  margin-left: 21px; 
+  box-sizing: border-box;
   font: inherit;
   background-color: #f2f2f2;
   border: none;
 }
 
+.calendar {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  bottom: 8px;
+}
+
+.calendar:hover {
+  background: url("../img/calendar-2.svg") no-repeat 0 0;
+}
+
+.calendar:focus {
+  background: url("../img/calendar-3.svg") no-repeat 0 0;
+}
 
 .date {
   background-color:	#f2f2f2;
@@ -354,7 +387,34 @@ site-navigation a:active {
 }
 
 .hotel {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.hotel label {
+  display: flex;
+  line-height: middle;
+}
+
+.hotel .adults {
+  margin-left:  41px;
+}
+
+.hotel .children {
+  margin-left:  27px;
+}
+
+.hotel button {
+  display: block;
+  width: 38px;
+  height: 38px;
   color: #cacaca;
+  background-color: #f2f2f2;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .hotel button:hover {
@@ -365,11 +425,31 @@ site-navigation a:active {
 	color: #81b3d2;
 }
 
+.hotel input {
+  display: block;
+  box-sizing: border-box;
+  font: inherit;
+  background-color: #f2f2f2;
+  border: none;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 .button-search {
+  display: block;
+  width: 458px;
   text-align: center;
   font-size: 21px;
   color: #ffffff;
   background-color: #81b3d2;
+  padding-top: 17px; 
+  padding-bottom: 22px;
+  margin: 0;
+  margin-top: 54px;
+  box-sizing: border-box;
 }
 
 .button-search:hover {
@@ -382,21 +462,20 @@ site-navigation a:active {
 }
 
 .map {
+  height: 100%;
   padding: 0;
   margin: 0;
 }
 
 .main-footer {
   position: absolute;
-  background-color: rgba(255,255,255,0.9); 
-  padding: 0;
-  margin: 0;
-}
-
-.main-footer .container {
+  width: 1200px;
   display: flex;
-  padding: 0;
-  margin: 0;
+  background-color: rgba(255,255,255,0.9);
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
 }
 
 .visit {
@@ -440,7 +519,6 @@ site-navigation a:active {
   height: 48px;
   color: #ffffff;
   background-color: #81b3d2;
-
 }
 
 .social-button:hover {
@@ -458,28 +536,26 @@ site-navigation a:active {
   margin: 0;  
 }
 
-.footer-copyright .copyright {
-  display: flex;
-  padding: 0;
-  padding-top: 39px;
-  padding-bottom: 40px;
-  margin: 0 auto;
-}
-
 .footer-copyright b {
   display: block;
   float: left;
   font-weight: 400;
   padding: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin: 0;
+  margin: 46px 8px 55px 102px;
 }
 
 .footer-copyright .button {
   display: block;
   padding: 0;
-  margin: 0;
+  margin: 39px 101px 40px 8px;
+}
+
+.footer-copyright .button:hover {
+  background: url("../img/logo-htmla-2.svg") no-repeat 0 0;
+}
+
+.footer-copyright .button:focus {
+  background: url("../img/logo-htmla-3.svg") no-repeat 0 0;
 }
 
 .variants {

@@ -103,38 +103,37 @@
       	и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="hotels-link" href="hotels.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
       	<form class="hotels-form" action="https://echo.htmlacademy.ru" method="post">
-      		<fieldset>
                 <p class="hotel-date">
                 	<label for="hotel-arrival-date">Дата заезда</label>
                 	<input id="hotel-arrival-date" type="text" name="arrival-date" class="date" value="" placeholder=" 24 апреля 2017">
+                  <img src="img/calendar.svg" width="21" height="22" alt="Календарь" class="calendar">
                 </p>
                 <p class="hotel-date">
                 	<label for="hotel-departure-date">Дата выезда</label>
                 	<input id="hotel-departure-date" type="text" name="departure-date" class="date" value="" placeholder=" 4 июля 2017">
+                  <img src="img/calendar.svg" width="21" height="22" alt="Календарь" class="calendar">
                 </p>
                 <p class="hotel">
                 	<label for="hotel-adults">Взрослые:
-           		        <button type="submit" name="down">-</button>
+           		        <button type="submit" name="down"  class="adults">-</button>
           		        <input type="text" name="adults" value="2" id="hotel-adults">
           		        <button type="submit" name="up">+</button>
           	        </label>
           	        <label for="hotel-children">Дети:
-          	        	<button type="submit" name="down">-</button>
+          	        	<button type="submit" name="down" class="children">-</button>
           		        <input type="text" name="children" value="0" id="hotel-children">
           		        <button type="submit" name="up">+</button>
           	        </label> 	
                 </p>
                     <button class="button-search" type="submit">Найти</button>
                     <!--<input type="submit" value="Найти">--> 
-            </fieldset>
         </form> 
       </section>
       <section class="map">
-      	<img src="img/map.jpg" width="1200" height="593" alt="Карта">
+        <img src="img/map.jpg" width="1200" height="593" alt="Карта">
       </section>
     </main>
     <footer class="main-footer">
-      <div class="container">
     	<p class="visit">
     		<a href="#">#visitsedona</a>
     	</p>
@@ -163,14 +162,11 @@
     	</ul>
       </div>
     	<p class="footer-copyright">
-    		<div class="copyright">
         <b>Website by</b>
     		<a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
     			<img src="img/logo-htmla.png" width="115" height="41" alt="Логотип HTML Academy">
     		</a>
-      </div>
     	</p>
-    </div>
     </footer>
   </body>
 </html>
