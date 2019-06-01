@@ -46,19 +46,22 @@ button {
   border: none;
 }
 
-.main-navigation {
-  color: #000000;
-  background-color: #ffffff;
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .site-navigation {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  width: 1200px;
-  height: 56px;
   margin: 0;
   padding: 0;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.container {
+  position: relative;
 }
 
 .main-header-logo {
@@ -68,17 +71,34 @@ button {
 }
 
 .site-navigation li {
-  width: 239px;
-  height: 56px;
+  width: 25%;
   text-align: center;
-  padding: 0;
+  padding-top: 15px; 
+  padding-bottom: 15px;
   margin: 0;
 }
 
+.site-navigation li:nth-child(1) {
+  text-align: left;
+  padding-left: 72px;
+}
+
+.site-navigation li:nth-child(2) {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.site-navigation li:nth-child(3) {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.site-navigation li:nth-child(4) {
+  text-align: right;
+  padding-right: 72px;
+}
+
 .site-navigation a {
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
   color: #000000;
 }
 
@@ -95,37 +115,36 @@ site-navigation a:active {
 }
 
 .welcome {
-  width: 1200px;
   min-height: 528px;
   background-color: #e1e3b0;
   background-image: url("../img/polygon.png"), url("../img/background-photo.jpg");
-  background-position: 0 470px, center top;
+  background-position: -1px 470px, center top;
   background-repeat: no-repeat, no-repeat;
 }
 
 .welcome img {
-  position: absolute;
-  top: 132px;
-  left: 50%;
-  margin-left: -230px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 76px;
 }
 
 .info {
   text-align: center;
   width: 1200px;
-  height: 216px;
   margin: 0;
-  padding-top: 49px;
-  padding-bottom: 56px;
-  box-sizing: border-box;
+  padding-top: 35px;
+  padding-bottom: 60px;
 }
 
 .info h2 {
- font-size: 21px; 
+ font-size: 21px;
+ margin: 0;
+ margin-bottom: 25px; 
 }
 
 .info p {
   font-weight: 400;
+  margin: 0;
 }
 
 .real-town h2,
@@ -135,6 +154,9 @@ site-navigation a:active {
   font-size: 21px;
   line-height: 21px;
   text-align: center;
+  padding: 0; 
+  margin: 0;
+  margin-bottom: 21px;
 }
 
 .real-town p,
@@ -144,70 +166,118 @@ site-navigation a:active {
   line-height: 21px;
   font-weight: 400;
   text-align: center;
+  padding: 0; 
+  margin: 0;
+  margin-bottom: 21px;
 }
 
 .real-town {
   display: flex;
   width: 1200px;
-  margin: 0;
+  background-color: #81b3d2;
   padding: 0; 
+  margin: 0;
 }
 
 .town-life {
   width: 400px;
-  height: 256px;
   color: #ffffff;
-  background-color: #81b3d2;
-  padding-top: 45px;
+  padding: 0; 
   margin: 0;
-  box-sizing: border-box;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.image-town img {
+  height: 100%;
 }
 
 .advices {
   display: flex;
   width: 1200px;
-  margin: 0;
   padding: 0; 
+  margin: 0; 
 }
 
 .advice-item {
   width: 400px;
-  height: 330px;
-  padding-top: 158px;
-  box-sizing: border-box;
+  padding: 0; 
+  margin: 0;
+  padding-bottom: 66px;
+}
+
+.advice-item h2 {
+  position: relative; 
+  padding-top: 158px; 
+}
+
+.advice-item:first-child h2::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  top: 60px;
+  left: 162px; 
+  background: url("../img/icon-1.svg") no-repeat 0 0;
+}
+
+.advice-item:nth-child(2) h2::before {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 70px;
+  top: 60px;
+  left: 50%; 
+  margin-left: -37px;
+  background: url("../img/icon-2.svg") no-repeat 0 0;
+}
+
+.advice-item:last-child h2::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 76px;
+  top: 56px;
+  left: 50%; 
+  margin-left: -32px; 
+  background: url("../img/icon-3.svg") no-repeat 0 0;
 }
 
 .reason-bridge {
   width: 1200px;
   display: flex;
+  background-color: #81b3d2;
+  padding: 0; 
   margin: 0;
-  padding: 0;
 }
 
 .bridge {
   width: 400px;
-  height: 256px;
   color: #ffffff;
-  background-color: #81b3d2;
   padding: 0;
   margin: 0;
-  padding-top: 45px;
-  box-sizing: border-box;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.image-bridge img {
+  height: 100%;
 }
 
 .features {
   display: flex;
   width: 1200px;
+  padding: 0; 
   margin: 0;
-  padding: 0;
 }
 
 .feature-item {
   width: 400px;
-  height: 256px;
   background-color: #eeeeee;
-  padding-top: 45px;
-  box-sizing: border-box;
+  padding: 0; 
+  margin: 0;
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
 
 .hotels-link {
@@ -228,11 +298,18 @@ site-navigation a:active {
 
 .hotels {
   text-align: center;
+  padding: 0;
+  margin:  0;
+  padding-top: 44px;
+  padding-bottom: 55px;
 }
 
 .hotels h2 {
   font-size: 30px;
   line-height: 36px;
+  padding: 0;
+  margin:  0;
+  margin-bottom: 24px;
 }
 
 .hotels p {
@@ -241,6 +318,7 @@ site-navigation a:active {
 }
 
 .hotels-link a {
+  display: block;
   text-align: center;
   font-size: 21px;
   color: #ffffff;
@@ -303,29 +381,66 @@ site-navigation a:active {
   background-color: #5496bd;
 }
 
-.main-footer {
-  display: flex;
+.map {
+  padding: 0;
+  margin: 0;
 }
+
+.main-footer {
+  position: absolute;
+  background-color: rgba(255,255,255,0.9); 
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer .container {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
 .visit {
-  width: 136px;
-  margin-left: 130px;
-  margin-right: 255px;
+  width: 400px;
+  padding: 0;
+  margin: 0;
 }
 
 .visit a {
+  display: block;
   font-size: 21px;
   color: #000000;	
+  padding: 0;
+  padding-top: 42px;
+  padding-bottom: 53px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .footer-social {
-  list-style: none;
+  width: 400px;
+}
+
+.footer-social ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 150px;
+  padding: 0;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin: 0 auto;
+  list-style: none;
 }
 
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
   color: #ffffff;
   background-color: #81b3d2;
+
 }
 
 .social-button:hover {
@@ -338,10 +453,33 @@ site-navigation a:active {
 }
 
 .footer-copyright {
+  width: 400px;
+  padding: 0;
+  margin: 0;  
+}
+
+.footer-copyright .copyright {
+  display: flex;
+  padding: 0;
+  padding-top: 39px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.footer-copyright b {
+  display: block;
+  float: left;
   font-weight: 400;
-  width: 200px;
-  margin-left: auto;
-  margin-right: 100px;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.footer-copyright .button {
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 .variants {
