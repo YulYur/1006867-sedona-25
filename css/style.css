@@ -54,12 +54,15 @@ button {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 -15px rgba(0,0,0,0.2);
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2),
+  -5px 0 15px rgba(0,0,0,0.2); 
 }
 
 .site-navigation {
   list-style: none;
   display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
   margin: 0;
   padding: 0;
   color: #000000;
@@ -82,7 +85,6 @@ button {
   text-align: center;
   padding-top: 15px; 
   padding-bottom: 15px;
-  /*vertical-align: middle;*/
   margin: 0;
   box-sizing: border-box;
 }
@@ -124,10 +126,13 @@ button {
 }
 
 .welcome {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
   min-height: 508px;
-  background-color: #e1e3b0;
+  background-color: #e4f1f9;
   background-image: url("../img/polygon.png"), url("../img/background-photo.jpg");
-  background-position: -1px 450px, center top;
+  background-position: -1px 451px, center top;
   background-repeat: no-repeat, no-repeat;
 }
 
@@ -142,6 +147,9 @@ button {
   width: 1200px;
   padding-top: 60px;
   padding-bottom: 50px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .info h2 {
@@ -183,6 +191,8 @@ button {
   display: flex;
   width: 1200px;
   background-color: #81b3d2;
+  margin: 0 auto;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .town-life {
@@ -200,6 +210,9 @@ button {
 .advices {
   display: flex;
   width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .advice-item {
@@ -245,6 +258,8 @@ button {
   width: 1200px;
   display: flex;
   background-color: #81b3d2;
+  margin: 0 auto;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .bridge {
@@ -257,16 +272,22 @@ button {
 .features {
   display: flex;
   width: 1200px;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .feature-item {
   width: 400px;
-  background-color: #eeeeee;
   padding-top: 48px;
   padding-bottom: 38px;
 }
 
 .hotels {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
   position: relative;
   text-align: center;
   padding-top: 44px;
@@ -293,8 +314,8 @@ button {
   font-size: 21px;
   color: #ffffff;
   background-color: #766357;
-  padding-top: 26px; 
-  padding-bottom: 33px;
+  padding-top: 30px; 
+  padding-bottom: 30px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -335,6 +356,30 @@ button {
   font-weight: 700;
 }
 
+input[type="text"]::-webkit-input-placeholder {
+  color: #000000;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  color: #000000;
+}
+
+input[type="text"]::-ms-input-placeholder {
+  color: #000000;
+}
+
+input[type="text"]:-moz-placeholder {
+  color: #000000;
+}
+
+input[type="text"]::-moz-placeholder {
+  color: #000000;
+}
+
+input[type="text"]::placeholder {
+  color: #000000;
+}
+
 .hotels-form .hotel-date {
   position: relative;
   display: flex;
@@ -355,8 +400,10 @@ button {
 
 .hotel-date input {
   width: 346px;
+  height: 38px;
   padding: 6px 37px 6px 10px;
   margin: 0;
+  margin-left: auto;
   box-sizing: border-box;
   color: #000000;
   text-transform: uppercase;
@@ -495,6 +542,9 @@ button {
 }
 
 .map  {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
   max-height: 593px;
   position: relative;
 }
@@ -514,7 +564,7 @@ button {
   background-color: rgba(255,255,255,0.9);
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
   bottom: 0;
   z-index: 2;
 }
@@ -544,17 +594,17 @@ button {
 
 .footer-social {
   width: 400px;
-  padding-top: 37px;
-  padding-bottom: 35px;
+  padding-top: 34px;
+  padding-bottom: 32px;
 }
 
 .footer-social ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 150px;
+  justify-content: center;
+  width: 400px;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   list-style: none;
 }
 
@@ -566,6 +616,7 @@ button {
   height: 48px;
   color: #ffffff;
   background-color: #81b3d2;
+  margin: 3px;
 }
 
 .social-button:hover {
@@ -620,11 +671,17 @@ button {
   visibility: hidden;
 }
 
+.filters {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
+}
+
 .filter {
   display: flex;
   line-height: 21px;
   color: #ffffff;
-  background-color: #81b3d2;
+  background-color: #e4f1f9;
   background-image: url("../img/filter-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -700,8 +757,8 @@ button {
 
 .price-controls {
   position: relative;
-  height: 36px;
-  margin-top: 8px;
+  height: 32px;
+  margin-top: 9px;
   margin-bottom: 20px;
   font-size: 0;
 
@@ -713,7 +770,7 @@ button {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
+  line-height: 32px;
 
   vertical-align: top;
 
@@ -748,12 +805,13 @@ button {
 
   background: #ffffff;
   transform: translate(-50%, -50%);
+  margin-left: 2px;
 }
 
 .range-controls {
   position: relative;
 
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .range-controls .scale {
@@ -800,10 +858,10 @@ button {
   margin: 0;
   margin-left: 85px;
   margin-right: 96px;
-  padding: 6px 33px 5px 35px;
+  padding: 6px 32px 6px 35px;
 
   font-size: 14px;
-  line-height: 21px;
+  line-height: 20px;
 
   color: #ffffff;
   text-transform: uppercase;
@@ -821,10 +879,15 @@ button {
 }
 
 .sorting {
+  width: 1200px;
   display: flex;
   align-items: baseline;
   padding: 30px 72px;
+  margin: 0 auto;
+  background-color: #ffffff; 
   border-bottom: 1px solid #cacaca; 
+  box-sizing: border-box;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .sorting h2 {
@@ -880,6 +943,7 @@ button {
 }
 .sorting span {
   display: block;
+  align-self: center;
   width: 0;
   height: 0;
   border-left: 5.5px solid transparent;
@@ -918,6 +982,9 @@ button {
 
 .variants {
   width: 1200px; 
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .variants-hotels {
@@ -951,17 +1018,18 @@ button {
 .variant-hotel .description {
   display: flex;
   flex-wrap: wrap;
-  width: 258px;
+  width: 358px;
 }
 
 .description h2 {
-  width: 258px;
+  width: 352px;
   font-size: 21px;
   text-align: left;
   padding: 0;
   margin: 0;
   margin-top: -3px;
   margin-bottom: 10px;
+  margin-right: 6px;
 }
 
 .description .name {
@@ -978,11 +1046,13 @@ button {
 .description span {
   text-align: left;
   color: #333333;
+  margin-right: 6px;
 }
 
 .description .price {
-  width: 142px;
-  margin-left: 6px;
+  /*width: 142px;*/
+  flex-grow: 1;
+  margin-right: 100px;
 }
 
 .button-detail {
@@ -996,6 +1066,7 @@ button {
   padding-top: 3px;
   padding-bottom: 3px;
   margin-top: 14px;
+  margin-right: 6px;
 }
 
 .button-detail:hover {
@@ -1018,7 +1089,7 @@ button {
   padding-top: 3px;
   padding-bottom: 3px;
   margin-top: 14px;
-  margin-left: 6px;
+  margin-right: 100px;
 }
 
 .button-booking:hover {

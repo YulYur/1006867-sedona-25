@@ -105,12 +105,12 @@
       	<form class="hotels-form" action="https://echo.htmlacademy.ru" method="post">
                 <p class="hotel-date">
                 	<label for="hotel-arrival-date">Дата заезда:</label>
-                  <input id="hotel-arrival-date" type="text" name="arrival-date" class="date" value="" placeholder=" 24 апреля 2017">
+                  <input id="hotel-arrival-date" type="text" name="arrival-date" class="date" value="" placeholder=" 24 апреля 2017" required>
                   <a class="calendar" href="#"></a>
                 </p>
                 <p class="hotel-date">
                 	<label for="hotel-departure-date">Дата выезда:</label>
-                    <input id="hotel-departure-date" type="text" name="departure-date" class="date" value="" placeholder=" 4 июля 2017">
+                    <input id="hotel-departure-date" type="text" name="departure-date" class="date" value="" placeholder=" 4 июля 2017" required>
                     <a class="calendar" href="#"></a>
                 </p>
                 <p class="guest">
@@ -118,7 +118,7 @@
            		      <button type="button" name="down"  class="minus">
                       <span class="visually-hidden">Уменьшить</span>
                     </button>
-          		      <input type="text" name="adults" value="" id="guest-adults" placeholder="2">
+          		      <input type="text" name="adults" value="" id="guest-adults" placeholder="2" required>
           		      <button type="button" name="up" class="plus">
                       <span class="visually-hidden">Увеличить</span>
                     </button>
@@ -127,7 +127,7 @@
           	        <button type="button" name="down" class="minus">
                       <span class="visually-hidden">Уменьшить</span>
                     </button>
-          		      <input type="text" name="children" value="" id="guest-children" placeholder="0">
+          		      <input type="text" name="children" value="" id="guest-children" placeholder="0" required>
           		      <button type="button" name="up" class="plus">
                       <span class="visually-hidden">Увеличить</span>
                     </button>
@@ -180,10 +180,12 @@
     <script> 
         var link = document.querySelector(".hotels-link");
         var form = document.querySelector(".hotels-form");
+        var arrivalDate = form.querySelector("[name=arrival-date]");
        
         link.addEventListener("click", function (evt) {
           evt.preventDefault();
           form.classList.toggle("hotels-form-close");
+          arrivalDate.focus();
 });
 </script>
   
