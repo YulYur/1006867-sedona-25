@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="wrapper">
   	<header class="main-header">
-      <div class="container">
       <nav class="main-navigation">
       	<a class="main-header-logo" href="index.html">
           <img src="img/logo.svg" width="140" height="72" alt="Логотип города Седона">
@@ -21,10 +21,10 @@
           <li><a href="inner.html">Гостиницы</a></li>
         </ul>    
       </nav>
-    </div>
     </header>
     <main class="container">
       <section class="welcome">
+        <h2 class="visually-hidden">Приветствие</h2>
       	<img src="img/welcome.png" width="459" height="353" alt="Welcome to Sedona">
       </section>
       <section class="info">
@@ -115,34 +115,27 @@
                 </p>
                 <p class="guest">
                 	<label for="guest-adults" class="adults">Взрослые:
-           		      <button type="button" name="down"  class="minus">
-                      <span class="visually-hidden">Уменьшить</span>
-                    </button>
+                    <span class="minus"></span>
           		      <input type="text" name="adults" value="" id="guest-adults" placeholder="2" required>
-          		      <button type="button" name="up" class="plus">
-                      <span class="visually-hidden">Увеличить</span>
-                    </button>
+                    <span class="plus"></span>
           	      </label>
           	      <label for="guest-children" class="children">Дети:
-          	        <button type="button" name="down" class="minus">
-                      <span class="visually-hidden">Уменьшить</span>
-                    </button>
+          	        <span class="minus"></span>
           		      <input type="text" name="children" value="" id="guest-children" placeholder="0" required>
-          		      <button type="button" name="up" class="plus">
-                      <span class="visually-hidden">Увеличить</span>
-                    </button>
+          		      <span class="plus"></span>
           	      </label> 	
                 </p>
                     <button class="button-search" type="submit">Найти</button>
         </form> 
       </section>
       <section class="map">
+        <h2 class="visually-hidden">Карта</h2>
         <img src="img/map.jpg" width="1200" height="593" alt="Карта">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419081.0413369726!2d-112.0753039864071!3d34.85445243830679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1560435378930!5m2!1sru!2sru" width="1200" height="473" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <!--<iframe src="https://yandex.ru/map-widget/v1/-/CCG~6Y7j" width="1200" height="593" frameborder="1" allowfullscreen="true"></iframe>-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419081.0413369726!2d-112.0753039864071!3d34.85445243830679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1560435378930!5m2!1sru!2sru" width="1200" height="473" style="border:0" allowfullscreen></iframe>
+        <!--<iframe src="https://yandex.ru/map-widget/v1/-/CCSBj2io" width="1200" height="593" frameborder="1" allowfullscreen="true"></iframe>-->
       </section>
     </main>
-    <footer class="main-footer container">
+    <footer class="main-footer">
     	<p class="visit">
     		<a href="#">#visitsedona</a>
     	</p>
@@ -177,17 +170,15 @@
     		</a>
     	</p>
     </footer>
-    <script> 
-        var link = document.querySelector(".hotels-link");
-        var form = document.querySelector(".hotels-form");
-        var arrivalDate = form.querySelector("[name=arrival-date]");
-       
-        link.addEventListener("click", function (evt) {
+  </div>
+  <script> 
+    var link = document.querySelector(".hotels-link");
+    var form = document.querySelector(".hotels-form");
+  
+    link.addEventListener("click", function (evt) {
           evt.preventDefault();
           form.classList.toggle("hotels-form-close");
-          arrivalDate.focus();
-});
-</script>
-  
+    });
+  </script>
   </body>
 </html>

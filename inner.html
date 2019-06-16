@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="wrapper">
   	<header class="main-header">
-        <div class="container">
   		    <nav class="main-navigation">
   			    <a class="main-header-logo" href="index.html">
   				    <img src="img/logo.svg" width="140" height="72" alt="Логотип города Седона">
@@ -21,7 +21,6 @@
                 <li><a href="inner.html">Гостиницы</a></li>
             </ul>    
         </nav>
-      </div>
     </header>
     <main class="container">
     	<section class="filters">
@@ -35,7 +34,7 @@
                   <label for="filter-pool">Бассейн</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-pool">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
                   <label for="filter-parking">Парковка</label>
                 </li>
                 <li class="filter-option">
@@ -76,6 +75,7 @@
                 </div>
                 <button class="button-transparent" type="submit">Показать</button>
             </fieldset>
+          </form>
         </section>
         <section class="sorting">
             <h2>Найдено: 3</h2>
@@ -135,7 +135,7 @@
           </ul>
         </section>
     </main>
-    <footer class="main-footer-inner container">
+    <footer class="main-footer-inner">
         <p class="visit">
             <a href="#">#visitsedona</a>
         </p>
@@ -170,5 +170,6 @@
             </a>
         </p>
     </footer>
+  </div>
   </body>
 </html>
