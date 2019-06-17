@@ -479,7 +479,6 @@ input[type="text"]::placeholder {
 .children .minus {
   margin-left:  27px;
 }
-
 .guest .minus::before {
   content: "";
   position: absolute;
@@ -505,15 +504,17 @@ input[type="text"]::placeholder {
   transform: rotate(90deg);
 }
 
-.guest button:hover::before,
-.guest button:hover::after {
+.guest .minus:hover::before,
+.guest .plus:hover::before,
+.guest .plus:hover::after {
   background-color: #000000;
 }
 
-.guest button:focus::before,
-.guest button:focus::after {
-	background-color: #81b3d2;
-  border: none;
+.guest .minus:focus::before,
+.guest .plus:active::before,
+.guest .plus:active::after {
+  background-color: #81b3d2;
+  /*border: none;*/
 }
 
 .guest input {
