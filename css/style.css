@@ -451,15 +451,24 @@ input[type="text"]::placeholder {
 
 .hotels-form .guest {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .guest label {
-  display: flex;
-  align-items: center;
+  display: block;
+  margin: 0;
+  padding: 0; 
+}
+
+.guest .adults {
+  margin-right: 41px;
+}
+.guest .children {
+  margin-left: auto;
+  margin-right: 27px;
 }
 
 .guest span {
@@ -472,13 +481,6 @@ input[type="text"]::placeholder {
   margin: 0;
 }
 
-.adults .minus {
-  margin-left:  41px;
-}
-
-.children .minus {
-  margin-left:  27px;
-}
 .guest .minus::before {
   content: "";
   position: absolute;
@@ -510,7 +512,7 @@ input[type="text"]::placeholder {
   background-color: #000000;
 }
 
-.guest .minus:focus::before,
+.guest .minus:active::before,
 .guest .plus:active::before,
 .guest .plus:active::after {
   background-color: #81b3d2;
@@ -670,11 +672,13 @@ input[type="text"]::placeholder {
   display: flex;
   line-height: 21px;
   color: #ffffff;
-  background-color: #e4f1f9;
+  background-color: #3b5667;
   background-image: url("../img/filter-background.jpg");
-  background-position: center;
+  background-position: 0 0;
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 26px 72px 32px;
+  box-sizing: ;
 }
 
 .filter fieldset {
@@ -912,6 +916,11 @@ input[type="text"]::placeholder {
   border-bottom: 1px dotted #81b3d2; 
 }
 
+.sorting .active {
+  color: #81b3d2;
+  border: none;
+}
+
 .sorting a:hover {
   color: #81b3d2;
   border-bottom: 1px dotted #81b3d2;
@@ -922,11 +931,11 @@ input[type="text"]::placeholder {
   border: none;
 }
 
-.sorting a:active,
-.sorting .active {
+.sorting a:active {
   color: #81b3d2;
   border: none;
 }
+
 .sorting span {
   display: block;
   align-self: center;
@@ -956,12 +965,18 @@ input[type="text"]::placeholder {
   border-top: 10px solid #000000;
 }
 
-.sorting .up:focus,
+.sorting .up:focus {
+ border-bottom: 10px solid #81b3d2; 
+}
+
 .sorting .up:active {
  border-bottom: 10px solid #81b3d2; 
 }
 
-.sorting .down:focus,
+.sorting .down:focus {
+  border-top: 10px solid #81b3d2;
+}
+
 .sorting .down:active {
   border-top: 10px solid #81b3d2;
 }
@@ -1118,10 +1133,11 @@ input[type="text"]::placeholder {
 }
 
 .rating .rating-number {
-  padding: 3px 13px 3px 14px;
+  padding: 3px 0;
   background-color: #f2f2f2;
   box-sizing: border-box;
   color: #666666;
+  text-align: center;
 }
 
 .main-footer-inner {
