@@ -9,84 +9,81 @@
   </head>
   <body>
     <div class="wrapper">
-  	<header class="main-header">
-  		    <nav class="main-navigation">
-  			    <a class="main-header-logo" href="index.html">
-  				    <img src="img/logo.svg" width="140" height="72" alt="Логотип города Седона">
-            </a>
-            <ul class="site-navigation">
-                <li><a href="info.html">Информация</a></li>
-                <li><a href="photos.html">Фото и видео</a></li>
-                <li><a href="map.html">Карта штата</a></li>
-                <li><a href="#" class="active">Гостиницы</a></li>
-            </ul>    
+      <header class="main-header">
+        <nav class="main-navigation">
+          <a class="main-header-logo" href="index.html">
+            <img src="img/logo.svg" width="140" height="72" alt="Логотип города Седона">
+          </a>
+          <ul class="site-navigation">
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="photos.html">Фото и видео</a></li>
+            <li><a href="map.html">Карта штата</a></li>
+            <li><a href="#" class="active">Гостиницы</a></li>
+          </ul>
         </nav>
-    </header>
-    <main class="container">
-    	<section class="filters">
-        <h2 class="visually-hidden">Фильтр гостиниц</h2>
-        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="infrastructure">
-              <legend class="filter-infrastructure">Инфраструктура:</legend>
-              <ul>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
-                  <label for="filter-pool">Бассейн</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
-                  <label for="filter-parking">Парковка</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
-                  <label for="filter-wi-fi">Wi-Fi</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="housing">
-              <legend class="filter-housing">Тип жилья:</legend>
-              <ul>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
-                  <label for="filter-hotel">Гостиница</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
-                  <label for="filter-motel">Мотель</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
-                  <label for="filter-apartments">Апартаменты</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter-range">
-                <legend class="filter-range-title">Стоимость в сутки (р):</legend>
-                <div class="price-controls">
-                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-                  <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
-                </div>
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
-                  </div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
-                </div>
-                <button class="button-transparent" type="submit">Показать</button>
-            </fieldset>
-          </form>
-        </section>
+      </header>
+      <main class="container">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get" name="filters">
+          <fieldset class="infrastructure">
+            <legend class="filter-infrastructure">Инфраструктура:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <label for="filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="housing">
+            <legend class="filter-housing">Тип жилья:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                <label for="filter-apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-range">
+            <legend class="filter-range-title">Стоимость в сутки (р):</legend>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="button-transparent" type="submit">Показать</button>
+          </fieldset>
+        </form>
         <section class="sorting">
-            <h2>Найдено: 3</h2>
-            <h3>Сортировка:</h3>
-                <ul>
-                    <li><a href="#" class="active">По цене</a></li>
-                    <li><a href="#">По типу</a></li>
-                    <li><a href="#">По рейтингу</a></li>
-                </ul>
-            <span class="up"></span>
-            <span class="down"></span>
+          <h2>Найдено: 3</h2>
+          <h3>Сортировка:</h3>
+          <ul class="theme-sorting">
+            <li><a href="#" class="active">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По рейтингу</a></li>
+          </ul>
+          <a href="#" class="up"></a>
+          <a href="#" class="down"></a>
         </section>
         <section class="variants">
         	<ul class="variants-hotels">
@@ -134,42 +131,40 @@
      	      </li>
           </ul>
         </section>
-    </main>
-    <footer class="main-footer-inner">
+      </main>
+      <footer class="main-footer-inner">
         <p class="visit">
-            <a href="#">#visitsedona</a>
+          <a href="#">#visitsedona</a>
         </p>
-      <div class="footer-social">
-        <ul>
+        <div class="footer-social">
+          <ul>
             <li><a class="social-button" href="#">
-          <span class="visually-hidden">Твиттер</span>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15">
-            <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z">
-            </path>
-          </svg>
-        </a></li>
-        <li><a class="social-button" href="#">
-          <span class="visually-hidden">Фейсбук</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22">
-            <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z">
-            </path>
-          </svg>
-        </a></li>
+              <span class="visually-hidden">Твиттер</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15">
+                <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"></path>
+              </svg>
+            </a></li>
             <li><a class="social-button" href="#">
-          <span class="visually-hidden">Ютуб</span>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
-            <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
-          </svg>
-        </a></li>
-        </ul>
-      </div>
+              <span class="visually-hidden">Фейсбук</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22">
+                <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"></path>
+              </svg>
+            </a></li>
+            <li><a class="social-button" href="#">
+              <span class="visually-hidden">Ютуб</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
+                <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"></path>
+              </svg>
+            </a></li>
+          </ul>
+        </div>
         <p class="footer-copyright">
-        <b>Website by</b>
-            <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
-                <img src="img/logo-htmla.png" width="115" height="41" alt="Логотип HTML Academy" class="logo-htmla">
-            </a>
+          <b>Website by</b>
+          <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-htmla.svg" width="115" height="41" alt="Логотип HTML Academy" class="logo-htmla">
+          </a>
         </p>
-    </footer>
-  </div>
+      </footer>
+    </div>
   </body>
 </html>
